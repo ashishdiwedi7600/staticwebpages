@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b0eb35e431.js" crossorigin="anonymous"></script>
+    <title>My Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <div class="logo">
+            <img src="kloudrac_new_logo-1 (1).png" alt="No Image" class="logo_img" >    
+        </div>
+        <div class="logo-text">
+            Technical Blog
+        </div>
+        <div class="wrocus_logo">
+            <img src="image (7).png" alt="No Image" class="logo_img" > 
+        </div>
+        
+    </header>
+
+    <div class="blackbox ">
+        <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+        
+        <h1>Platform Events in Salesforce</h1>
+    </div>
+
+    <!-- <img src="salesforce.jpg" alt="Featured Image" class="featured-image"> -->
+
+    <div class="content">
+        
+        
+        <p>Platform Event is based on Event-Driven Architecture which enables apps to communicate inside and outside of Salesforce. Platform events are based on the publish/subscribe model and work directly with a message bus that handles the queue of incoming events and processes listening for them. This is built in real-time integration patterns in the Salesforce Platform which helps to reduce point-to-point integration.
+        </p>
+        
+        <h2> What is Event-Driven Architecture </h2>
+        <p>The paradigm of event-based communication revolves around a publisher-subscriber model—a sender broadcasts a message that one or more receivers capture. It’s like radio transmission—a transmitter tower broadcasts a radio signal, and receivers get the signal if they’re</p>
+        <img src="pic1.png" alt="No Image" class="pic1style">
+        
+        <h2> More On Event-Driven Architecture</h2>
+        <p>Event: A change in state that is meaningful in a business process.
+            Event message/Notification: A message that contains data about the event.
+            Event producer: The publisher of an event message over a channel.
+            Channel: A conduit in which an event producer transmits a message. Event consumers subscribe to the channel to receive messages. Also referred to as event bus in Salesforce.
+            Event consumer: A subscriber to a channel that receives messages from the channel.
+            SObject like Salesforce Entity - Suffixed with __e</p>
+
+            <h2>Benefits of Platform Events</h2>
+            <img src="businesman-technological-scene.jpg" alt="Featured Image" class="img3">
+            <p>In order to overcome the governor limits of Salesforce, the platform events can be used.
+                Mixed DML Operations, Too Many SOQL Queries, Too Many DML Statements, CPU Timeout Salesforce’s Governor limits are there for a reason but even when you employ best practices you may still exceed them.
+                </p>
+
+                <h2>Considerations of Platform Events</h2>
+                <p>Platform event is appended with__e suffix for the API name of the event.
+                    You can not query Platform events through SOQL or SOSL.
+                    You can not use Platform in reports, list views, and searches. Platform events don’t have an associated tab.
+                    Published platform events can’t be rolled back.
+                    All platform event fields are read-only by default.
+                    Only “after insert” Triggers Are Supported.
+                    You can access platform events both through API and declaratively.
+                    You can control platform events through Profiles and permissions.
+                    </p>
+
+                    <h2>Use Case for Platform Events</h2>
+                    <h3>Platform to External App: Order Fulfillment in a Vendor App</h3>
+                    <p>When an opportunity closes as won in Salesforce, your company has won a deal with a customer.
+                        Let’s say you use vendors to ship products associated with an opportunity.
+                        Each vendor has an external app that processes shipment orders for specific products.
+                        The external app listens to platform events.
+                        When an opportunity closes, a trigger, which is part of a product order app in Salesforce, fires and publishes a platform event message.
+                        Each vendor app is notified of the event.
+                        The vendor responsible for shipping the specific product creates the shipment.
+                        </p>
+
+                        <h2>Publish/Subscribe Platform Events</h2>
+                        <img src="saas-concept-collage.jpg"alt="No Image" class="img4"><br>
+                        <p>Create a Platform event:Event Name: Shipment Order API Name: Shipment_Order__e
+                            Now this platform event can be published using triggers, flows, or even using APIs.
+                            The platform event can be subscribed to using:Triggers(after insert)LWC - Use the empApi methods Aura - add the lightning:empApi component inside your custom component and assign an aura:id attribute to it.
+
+                            </p>
+
+                            <h1>Conclusion</h1>
+                            <p>Using Platform Events can lead to more efﬁcient and automated business processes, as well as improved communication between different departments and systems. With the help of a skilled Salesforce developer or consultant, your organization can start taking advantage of this powerful feature today.
+                                
+                            </p>
+      </div>
+    </div>
+  
+    
+</body>
+</html>
